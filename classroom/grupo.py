@@ -3,18 +3,16 @@ from classroom.asignatura import Asignatura
 class Grupo:
     grado = None
 
-    def __init__(self, grupo="grupo ordinado", asignaturas=None, estudiantes=None):
+    def __init__(self, grupo="grupo ordinado", estudiantes=None, asignaturas=None):
         self._grupo = grupo
-        self._asignaturas = asignaturas if asignaturas is not None else []
-        self.listadoAlumnos = estudiantes if estudiantes is not None else []
+        self._asignaturas = asignaturas or []
+        self.listadoAlumnos = estudiantes or []
 
-    def listadoAsignaturas(self, asignaturas):
-        for asignatura in asignaturas:
-            self._asignaturas.append(Asignatura(asignatura))
+    def listadoAsignaturas(self, *args):
+        for x in args:
+            self._asignaturas.append(Asignatura(x))
 
-    def agregarAlumno(self, alumno, lista=None):
-        if lista is None:
-            lista = []
+    def agregarAlumno(self, alumno, lista=[]):
         lista.append(alumno)
         self.listadoAlumnos = self.listadoAlumnos + lista
 
