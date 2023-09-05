@@ -8,8 +8,8 @@ class Grupo:
         self._asignaturas = asignaturas if asignaturas is not None else []
         self.listadoAlumnos = estudiantes if estudiantes is not None else []
 
-    def listadoAsignaturas(self, **kwargs):
-        for asignatura in kwargs.values():
+    def listadoAsignaturas(self, *args):
+        for asignatura in args:
             self._asignaturas.append(Asignatura(asignatura, ""))
 
     def agregarAlumno(self, alumno, lista=None):

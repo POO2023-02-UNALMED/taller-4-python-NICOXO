@@ -1,8 +1,4 @@
 class Asignatura:
 
-    def __init__(self, nombre, salon=""):
+    def __init__(self, nombre):
         self._nombre = nombre
-        self._salon = salon
-
-    # def __str__(self):
-    #     pass
