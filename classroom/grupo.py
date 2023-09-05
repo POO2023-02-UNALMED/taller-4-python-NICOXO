@@ -8,7 +8,7 @@ class Grupo:
         self._asignaturas = asignaturas if asignaturas is not None else []
         self.listadoAlumnos = estudiantes if estudiantes is not None else []
 
-    def listadoAsignaturas(self, *asignaturas):
+    def listadoAsignaturas(self, asignaturas):
         for asignatura in asignaturas:
             self._asignaturas.append(Asignatura(asignatura))
 
