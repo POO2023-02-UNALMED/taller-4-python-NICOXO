@@ -18,9 +18,10 @@ class Grupo:
         lista.append(alumno)
         self.listadoAlumnos = self.listadoAlumnos + lista
 
-    # def __str__(self):
-    #     pass
-
     @classmethod
     def asignarNombre(cls, nombre="Grado 10"):
         cls.grado = nombre
+
+    @staticmethod
+    def asignarNombreEstático(nombre="Grado 6"):
+        Grupo.grado = nombre
