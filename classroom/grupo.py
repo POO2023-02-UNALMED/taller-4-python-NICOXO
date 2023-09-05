@@ -9,8 +9,8 @@ class Grupo:
         self.listadoAlumnos = estudiantes if estudiantes is not None else []
 
     def listadoAsignaturas(self, *args):
-        for asignatura in args:
-            self._asignaturas.append(Asignatura(asignatura))
+      for asignatura in args:
+        self._asignaturas.append(Asignatura(asignatura))
 
     def agregarAlumno(self, alumno, lista=None):
         if lista is None:
@@ -21,3 +21,7 @@ class Grupo:
     @classmethod
     def asignarNombre(cls, nombre="Grado 10"):
         cls.grado = nombre
+
+    @staticmethod
+    def cambiarNombreGrado(nombre):
+      Grupo.grado = nombre    
